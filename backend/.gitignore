@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+
+# Build output
+dist/
+build/
+
+# Dynamic Git Repositories created at runtime
+repositories/*
+!repositories/.gitkeep
+
+# Environment
+.env
+.env*.local
+!.env.example
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
