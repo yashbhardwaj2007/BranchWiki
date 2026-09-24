@@ -115,8 +115,8 @@ export const useWikiStore = create<WikiState>((set) => ({
   currentUser: (typeof window !== 'undefined' && localStorage.getItem('branchwiki_user'))
     ? JSON.parse(localStorage.getItem('branchwiki_user')!)
     : {
-        name: 'Yash Bhaskar',
-        email: 'yash@branchwiki.dev',
+        name: 'Yash Bhardwaj',
+        email: 'yashbhardwajg2007@gmail.com',
         color: '#0D9488',
       },
   typingCollaborator: null,

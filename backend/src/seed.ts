@@ -5,8 +5,8 @@ import { REPOS_DIR } from './config';
 
 const DEMO_WIKI_ID = 'demo-wiki';
 const DEMO_REPO_PATH = path.join(REPOS_DIR, DEMO_WIKI_ID);
-const AUTHOR = { name: 'Yash Bhaskar', email: 'yash@branchwiki.dev' };
-const AUTHOR2 = { name: 'Rahul Sharma', email: 'rahul@branchwiki.dev' };
+const AUTHOR = { name: 'Yash Bhardwaj', email: 'yashbhardwajg2007@gmail.com' };
+const AUTHOR2 = { name: 'Radhika', email: 'radhikakamal2004@gmail.com' };
 
 const FILES: Record<string, string> = {
   'README.md': `# Product Documentation

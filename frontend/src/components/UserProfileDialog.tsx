@@ -17,9 +17,9 @@ const COLOR_OPTIONS = [
 ];
 
 const PRESET_USERS = [
-  { name: 'Yash Bhaskar', email: 'yash@branchwiki.dev', color: '#0D9488' },
-  { name: 'Rahul Sharma', email: 'rahul@branchwiki.dev', color: '#6366F1' },
-  { name: 'Alex Chen', email: 'alex@branchwiki.dev', color: '#EC4899' },
+  { name: 'Yash Bhardwaj', email: 'yashbhardwajg2007@gmail.com', color: '#0D9488' },
+  { name: 'Radhika', email: 'radhikakamal2004@gmail.com', color: '#6366F1' },
+  { name: 'Meetmux', email: 'meetmux@branchwiki.dev', color: '#EC4899' },
 ];
 
 export function UserProfileDialog() {
@@ -117,7 +117,7 @@ export function UserProfileDialog() {
                 type="text"
                 value={name}
                 onChange={e => setName(e.target.value)}
-                placeholder="e.g. Yash Bhaskar"
+                placeholder="e.g. Yash Bhardwaj"
                 required
                 className="w-full pl-9 pr-3 py-1.5 text-sm bg-surface-bg border border-border rounded-lg outline-none focus:border-accent text-content-primary"
               />
@@ -134,7 +134,7 @@ export function UserProfileDialog() {
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="e.g. yash@branchwiki.dev"
+                placeholder="e.g. yashbhardwajg2007@gmail.com"
                 required
                 className="w-full pl-9 pr-3 py-1.5 text-sm bg-surface-bg border border-border rounded-lg outline-none focus:border-accent text-content-primary"
               />

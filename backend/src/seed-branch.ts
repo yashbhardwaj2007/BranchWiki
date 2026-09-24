@@ -43,7 +43,7 @@ Standard tier: 100 req/min.
     fs,
     dir,
     message: 'Add API reference and React performance optimization guide',
-    author: { name: 'Rahul Sharma', email: 'rahul@branchwiki.dev', timestamp: Math.floor(Date.now() / 1000) - 300 }
+    author: { name: 'Radhika', email: 'radhikakamal2004@gmail.com', timestamp: Math.floor(Date.now() / 1000) - 300 }
   });
 
   await git.checkout({ fs, dir, ref: 'main' });

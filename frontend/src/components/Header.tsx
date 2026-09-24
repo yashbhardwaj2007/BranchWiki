@@ -21,9 +21,9 @@ import {
 import clsx from 'clsx';
 
 const PRESET_USERS: UserProfile[] = [
-  { name: 'Yash Bhaskar', email: 'yash@branchwiki.dev', color: '#0D9488' },
-  { name: 'Rahul Sharma', email: 'rahul@branchwiki.dev', color: '#6366F1' },
-  { name: 'Alex Chen', email: 'alex@branchwiki.dev', color: '#F59E0B' },
+  { name: 'Yash Bhardwaj', email: 'yashbhardwajg2007@gmail.com', color: '#0D9488' },
+  { name: 'Radhika', email: 'radhikakamal2004@gmail.com', color: '#6366F1' },
+  { name: 'Meetmux', email: 'meetmux@branchwiki.dev', color: '#F59E0B' },
 ];
 
 export function Header({ onRefresh }: { onRefresh: () => void }) {
@@ -100,10 +100,10 @@ export function Header({ onRefresh }: { onRefresh: () => void }) {
 
   // One-click live peer collaboration demo trigger
   const handleSimulatePeerEdit = () => {
-    setTypingCollaborator('Rahul Sharma');
+    setTypingCollaborator('Radhika');
     setTimeout(() => {
       if (currentFile) {
-        const addition = `\n\n> 💡 **Peer Note (${new Date().toLocaleTimeString()} by Rahul)**:\n> Real-time peer collaboration verified with automatic AST diff tracking!\n`;
+        const addition = `\n\n> 💡 **Peer Note (${new Date().toLocaleTimeString()} by Radhika)**:\n> Real-time peer collaboration verified with automatic AST diff tracking!\n`;
         setFileContent(fileContent + addition);
       }
       setTimeout(() => setTypingCollaborator(null), 1500);

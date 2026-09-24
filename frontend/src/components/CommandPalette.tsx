@@ -181,11 +181,11 @@ export function CommandPalette() {
       icon: <Users size={14} />,
       action: () => {
         setCommandPaletteOpen(false);
-        const peer = { id: 'peer-sim', name: 'Alex Chen', color: '#8B5CF6' };
+        const peer = { id: 'peer-sim', name: 'Meetmux', color: '#8B5CF6' };
         if (!collaborators.some(c => c.name === peer.name)) {
           setCollaborators([...collaborators, peer]);
         }
-        setTypingCollaborator('Alex Chen');
+        setTypingCollaborator('Meetmux');
         setTimeout(() => setTypingCollaborator(null), 4500);
       },
       keywords: ['simulate', 'peer', 'collaborator', 'typing', 'multiplayer'],

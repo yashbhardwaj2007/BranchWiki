@@ -78,12 +78,12 @@ export function WelcomeView() {
   };
 
   const handleSimulatePeer = () => {
-    const peerUser = { id: 'peer-sim', name: 'Alex Chen', color: '#8B5CF6' };
+    const peerUser = { id: 'peer-sim', name: 'Meetmux', color: '#8B5CF6' };
     const exists = collaborators.some(c => c.name === peerUser.name);
     if (!exists) {
       setCollaborators([...collaborators, peerUser]);
     }
-    setTypingCollaborator('Alex Chen');
+    setTypingCollaborator('Meetmux');
     setTimeout(() => {
       setTypingCollaborator(null);
     }, 4500);
