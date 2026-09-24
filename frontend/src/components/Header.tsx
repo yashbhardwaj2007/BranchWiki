@@ -291,6 +291,18 @@ export function Header({ onRefresh }: { onRefresh: () => void }) {
                   {currentUser.email === user.email && <Check size={13} className="text-accent flex-shrink-0" />}
                 </button>
               ))}
+              <div className="border-t border-border mt-1 pt-1">
+                <button
+                  onClick={() => {
+                    setUserDropdownOpen(false);
+                    useWikiStore.getState().setUserProfileDialogOpen(true);
+                  }}
+                  className="w-full flex items-center gap-2 px-3 py-2 text-xs text-accent hover:bg-surface-hover transition-colors font-medium text-left"
+                >
+                  <Plus size={13} />
+                  <span>Set Custom Name / Profile</span>
+                </button>
+              </div>
             </div>
           )}
         </div>

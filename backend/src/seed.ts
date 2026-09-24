@@ -430,4 +430,9 @@ async function seed() {
   console.log('\n✅ Seeding complete! Demo wiki ready at: ' + DEMO_REPO_PATH);
 }
 
-seed().catch(console.error);
+export { seed };
+
+// Run directly if called from command line
+if (typeof require !== 'undefined' && require.main === module) {
+  seed().catch(console.error);
+}

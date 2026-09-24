@@ -23,8 +23,8 @@ router.get('/wikis/:wikiId/files', async (req: Request, res: Response, next: Nex
     
     const tree: TreeNode[] = [];
     const fileList = files
-      .map(f => f.path)
-      .filter(p => !p.startsWith('.git') && !p.includes('/.git'))
+      .map(f => f?.path)
+      .filter((p): p is string => typeof p === 'string' && !p.startsWith('.git') && !p.includes('/.git'))
       .sort();
     
     for (const filePath of fileList) {

@@ -26,7 +26,8 @@ const MonacoEditor = dynamic(() => import('@monaco-editor/react').then(m => m.de
   loading: () => <div className="flex-1 flex items-center justify-center text-content-tertiary text-xs">Loading Monaco editor...</div>
 });
 
-const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001';
+const API_HOST = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api').replace(/\/api\/?$/, '');
+const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL || API_HOST;
 
 export function EditorArea({ onSave }: { onSave: () => void }) {
   const {

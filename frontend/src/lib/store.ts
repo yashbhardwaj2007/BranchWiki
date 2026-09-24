@@ -53,6 +53,7 @@ interface WikiState {
   theme: 'light' | 'dark';
   outlineOpen: boolean;
   shortcutsDialogOpen: boolean;
+  userProfileDialogOpen: boolean;
   cursorPos: { line: number; col: number };
   astFilterType: string | null;
 
@@ -84,6 +85,7 @@ interface WikiState {
   setTheme: (theme: 'light' | 'dark') => void;
   setOutlineOpen: (open: boolean) => void;
   setShortcutsDialogOpen: (open: boolean) => void;
+  setUserProfileDialogOpen: (open: boolean) => void;
   setCursorPos: (pos: { line: number; col: number }) => void;
   setAstFilterType: (type: string | null) => void;
 }
@@ -110,17 +112,20 @@ export const useWikiStore = create<WikiState>((set) => ({
   conflictDialogOpen: false,
   conflictData: null,
   collaborators: [],
-  currentUser: {
-    name: 'Yash Bhaskar',
-    email: 'yash@branchwiki.dev',
-    color: '#0D9488',
-  },
+  currentUser: (typeof window !== 'undefined' && localStorage.getItem('branchwiki_user'))
+    ? JSON.parse(localStorage.getItem('branchwiki_user')!)
+    : {
+        name: 'Yash Bhaskar',
+        email: 'yash@branchwiki.dev',
+        color: '#0D9488',
+      },
   typingCollaborator: null,
   modifiedFiles: [],
 
   theme: 'dark',
   outlineOpen: false,
   shortcutsDialogOpen: false,
+  userProfileDialogOpen: false,
   cursorPos: { line: 1, col: 1 },
   astFilterType: null,
 
@@ -152,6 +157,7 @@ export const useWikiStore = create<WikiState>((set) => ({
   setTheme: (theme) => set({ theme }),
   setOutlineOpen: (open) => set({ outlineOpen: open }),
   setShortcutsDialogOpen: (open) => set({ shortcutsDialogOpen: open }),
+  setUserProfileDialogOpen: (open) => set({ userProfileDialogOpen: open }),
   setCursorPos: (pos) => set({ cursorPos: pos }),
   setAstFilterType: (type) => set({ astFilterType: type }),
 }));

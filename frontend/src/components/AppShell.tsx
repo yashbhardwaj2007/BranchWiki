@@ -17,6 +17,7 @@ import { HistoryPanel } from './HistoryPanel';
 import { ConflictResolutionDialog } from './ConflictResolutionDialog';
 import { StatusBar } from './StatusBar';
 import { ShortcutsDialog } from './ShortcutsDialog';
+import { UserProfileDialog } from './UserProfileDialog';
 
 export function AppShell() {
   const {
@@ -123,6 +124,7 @@ export function AppShell() {
       <SearchDialog />
       <CommandPalette />
       <ShortcutsDialog />
+      <UserProfileDialog />
     </div>
   );
 }
